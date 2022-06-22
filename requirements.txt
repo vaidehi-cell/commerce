@@ -11,4 +11,3 @@ pytz==2021.3
 sqlparse 
 typing_extensions 
 wincertstore==0.2
->>>>>>> 07eee2c7f051e5f203352cd2e05951d83ac1b6bb
