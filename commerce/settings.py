@@ -125,5 +125,5 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'auctions\static'),
 )
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'auctions/media') 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'auctions\media') 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
