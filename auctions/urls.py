@@ -20,7 +20,4 @@ urlpatterns = [
     path("add_bid/<int:item_id>", views.add_bid, name="add_bid"),
     path("close_bid/<int:item_id>", views.close_bid, name="close_bid"),
     path("closed_listings", views.closed_listings, name="closed_listings"),
-] 
-
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
