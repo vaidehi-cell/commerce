@@ -2,7 +2,6 @@ from django.urls import path, re_path
 from django.conf import settings
 from django.conf.urls.static import static
 from . import views
-from django.views.static import serve
 
 urlpatterns = [
     path("", views.index, name="index"),
@@ -20,4 +19,6 @@ urlpatterns = [
     path("add_bid/<int:item_id>", views.add_bid, name="add_bid"),
     path("close_bid/<int:item_id>", views.close_bid, name="close_bid"),
     path("closed_listings", views.closed_listings, name="closed_listings"),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
